@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Smart Business Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation Element -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-chart-pie"></i><span>NexusAnalytics</span>
+                <i class="fas fa-times sidebar-close" id="sidebarCloseBtn"></i>
+            </div>
+            <nav class="sidebar-menu">
+               <ul>
+    <li><a href="index.html"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+    <li><a href="analytics.html"><i class="fas fa-chart-line"></i><span>Analytics</span></a></li>
+    <li><a href="sales.html"><i class="fas fa-shopping-bag"></i><span>Sales</span></a></li>
+    <li><a href="customers.html"><i class="fas fa-users"></i><span>Customers</span></a></li>
+    <li><a href="products.html"><i class="fas fa-box"></i><span>Products</span></a></li>
+    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i><span>Orders</span></a></li>
+    <li><a href="users.html"><i class="fas fa-user-shield"></i><span>User Management</span></a></li>
+    <li><a href="reports.html"><i class="fas fa-file-alt"></i><span>Reports</span></a></li>
+    <li><a href="settings.html"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+</ul>
+            </nav>
+            <div class="sidebar-footer"><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></div>
+        </aside>
+
+        <!-- Main Panel Content Arena Container -->
+        <div class="main-workspace">
+            <header class="top-nav">
+                <div class="nav-left">
+                    <button class="menu-toggle-btn" id="menuToggleBtn"><i class="fas fa-bars"></i></button>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search parameters..." id="userTableSearchInput">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="live-clock" id="liveClock">00:00:00 PM</div>
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <button class="nav-icon-btn"><i class="fas fa-bell"></i><span class="badge">3</span></button>
+                    <div class="user-profile-menu">
+                        <div class="profile-trigger" id="profileTrigger">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="User" class="avatar">
+                            <span class="username">Sarah Jenkins</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="content-header layout-split-row">
+                    <div>
+                        <h1>Identity Management Framework</h1>
+                        <p class="text-muted">Control administrative access privileges, security levels, and dynamic directory roles.</p>
+                    </div>
+                    <button class="btn btn-primary" id="openCreateUserModalBtn"><i class="fas fa-user-plus"></i> Add Identity Asset</button>
+                </div>
+
+                <!-- Dynamic Data Table Component Wrapper Container -->
+                <div class="card-wrapper mt-4">
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Identity Asset</th>
+                                    <th>Email Signature</th>
+                                    <th>Assigned Role</th>
+                                    <th>Status Flag</th>
+                                    <th class="text-right">Operations Action Panel</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersDirectoryDynamicTable">
+                                <!-- JavaScript will inject dynamic code structures right inside here directly -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Create and Edit Unified Context Multi-Modal Configuration Window -->
+    <div class="modal-overlay" id="userFormModalContextOverlay">
+        <div class="modal-window-card">
+            <div class="modal-header">
+                <h3 id="modalContextActionTitle">Provision New Profile Context</h3>
+                <button class="modal-close-trigger-btn" id="modalCloseActionTriggerBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="userSystemDirectoryInteractiveForm">
+                <input type="hidden" id="formSubmissionHiddenProfileId">
+                <div class="modal-body-content">
+                    <div class="input-group">
+                        <label for="formFieldIdentityName">Full Name</label>
+                        <input type="text" id="formFieldIdentityName" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="formFieldIdentityEmail">Enterprise Email</label>
+                        <input type="email" id="formFieldIdentityEmail" placeholder="j.doe@enterprise.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="formFieldIdentityRole">Operational Role Context</label>
+                        <select id="formFieldIdentityRole" class="custom-select-control">
+                            <option value="System Administrator">System Administrator</option>
+                            <option value="Data Operations Analyst">Data Operations Analyst</option>
+                            <option value="Support Engineer">Support Engineer</option>
+                            <option value="Finance Auditor">Finance Auditor</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="formFieldIdentityStatus">Access Status Flag</label>
+                        <select id="formFieldIdentityStatus" class="custom-select-control">
+                            <option value="Active">Active</option>
+                            <option value="Suspended">Suspended</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer-actions">
+                    <button type="button" class="btn btn-outline" id="modalCancelActionTriggerBtn">Dismiss</button>
+                    <button type="submit" class="btn btn-primary" id="modalFormSubmitActionButton">Commit Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

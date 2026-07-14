@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Platform - Smart Business Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Shell Structure Component Layout -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-chart-pie"></i><span>NexusAnalytics</span>
+                <i class="fas fa-times sidebar-close" id="sidebarCloseBtn"></i>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+    <li><a href="index.html"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+    <li><a href="analytics.html"><i class="fas fa-chart-line"></i><span>Analytics</span></a></li>
+    <li><a href="sales.html"><i class="fas fa-shopping-bag"></i><span>Sales</span></a></li>
+    <li><a href="customers.html"><i class="fas fa-users"></i><span>Customers</span></a></li>
+    <li><a href="products.html"><i class="fas fa-box"></i><span>Products</span></a></li>
+    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i><span>Orders</span></a></li>
+    <li><a href="users.html"><i class="fas fa-user-shield"></i><span>User Management</span></a></li>
+    <li><a href="reports.html"><i class="fas fa-file-alt"></i><span>Reports</span></a></li>
+    <li><a href="settings.html"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+</ul>
+            </nav>
+            <div class="sidebar-footer"><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></div>
+        </aside>
+
+        <!-- Main Workspace Element -->
+        <div class="main-workspace">
+            <header class="top-nav">
+                <div class="nav-left">
+                    <button class="menu-toggle-btn" id="menuToggleBtn"><i class="fas fa-bars"></i></button>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search system configuration options...">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="live-clock" id="liveClock">00:00:00 PM</div>
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <button class="nav-icon-btn"><i class="fas fa-bell"></i><span class="badge">3</span></button>
+                    <div class="user-profile-menu">
+                        <div class="profile-trigger" id="profileTrigger">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="User Avatar" class="avatar">
+                            <span class="username">Sarah Jenkins</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="content-header">
+                    <h1>System Platform Parameters</h1>
+                    <p class="text-muted">Manage global variables, access flags, and workspace settings.</p>
+                </div>
+
+                <div class="settings-layout-matrix-grid mt-4">
+                    <!-- Section Configuration Panel Module Left Side Card Card Body Wrap -->
+                    <div class="card-wrapper">
+                        <div class="card-header"><h3 class="panel-section-title"><i class="fas fa-sliders-h"></i> Operational Workspace Profile Variables</h3></div>
+                        <form class="padded-form-layout-context" onsubmit="event.preventDefault(); alert('Profile variables updated successfully!');">
+                            <div class="grid-dual-column-layout">
+                                <div class="input-group">
+                                    <label>Workspace Alias Signature</label>
+                                    <input type="text" value="NexusAnalytics Operations Hub Container">
+                                </div>
+                                <div class="input-group">
+                                    <label>Administrative Route Access Email</label>
+                                    <input type="email" value="s.jenkins@nexusanalytics.io">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>System Logging Description Payload</label>
+                                <textarea rows="4">Primary localized system handling algorithmic tracking calculations, multi-page layout modules, and live transaction ledger systems architecture arrays.</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- System Toggle Variables Sub Module Control Dashboard Card Frame -->
+                    <div class="card-wrapper">
+                        <div class="card-header"><h3 class="panel-section-title"><i class="fas fa-toggle-on"></i> Global Operations Flags</h3></div>
+                        <div class="toggles-list-wrapper">
+                            <div class="toggle-switch-item-row">
+                                <div class="toggle-meta-description">
+                                    <h4>Production Multi-Factor Verification Shield</h4>
+                                    <p>Forces multi-tiered cryptographical handshakes on admin logins.</p>
+                                    <span class="badge status-badge badge-active mt-1">Highly Recommended</span>
+                                </div>
+                                <label class="switch-ui-element">
+                                    <input type="checkbox" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                            <hr class="divider-line">
+                            <div class="toggle-switch-item-row">
+                                <div class="toggle-meta-description">
+                                    <h4>Realtime API Analytics Mirroring</h4>
+                                    <p>Streams standard framework JSON payloads into storage clusters continuously.</p>
+                                </div>
+                                <label class="switch-ui-element">
+                                    <input type="checkbox">
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                            <hr class="divider-line">
+                            <div class="toggle-switch-item-row">
+                                <div class="toggle-meta-description">
+                                    <h4>Automatic Database Garbage Collection</h4>
+                                    <p>Clears ephemeral log segments, caching indices, and dynamic DOM buffers every 24 hours.</p>
+                                </div>
+                                <label class="switch-ui-element">
+                                    <input type="checkbox" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

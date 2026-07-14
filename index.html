@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - Smart Business Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Chart.js CDN CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-chart-pie"></i>
+                <span>NexusAnalytics</span>
+                <i class="fas fa-times sidebar-close" id="sidebarCloseBtn"></i>
+            </div>
+            <nav class="sidebar-menu">
+              <ul>
+    <li><a href="index.html"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+    <li><a href="analytics.html"><i class="fas fa-chart-line"></i><span>Analytics</span></a></li>
+    <li><a href="sales.html"><i class="fas fa-shopping-bag"></i><span>Sales</span></a></li>
+    <li><a href="customers.html"><i class="fas fa-users"></i><span>Customers</span></a></li>
+    <li><a href="products.html"><i class="fas fa-box"></i><span>Products</span></a></li>
+    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i><span>Orders</span></a></li>
+    <li><a href="users.html"><i class="fas fa-user-shield"></i><span>User Management</span></a></li>
+    <li><a href="reports.html"><i class="fas fa-file-alt"></i><span>Reports</span></a></li>
+    <li><a href="settings.html"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+</ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <div class="main-workspace">
+            <!-- Global Top Navigation Bar -->
+            <header class="top-nav">
+                <div class="nav-left">
+                    <button class="menu-toggle-btn" id="menuToggleBtn"><i class="fas fa-bars"></i></button>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search operations, metrics, users..." id="globalSearch">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="live-clock" id="liveClock">00:00:00 PM</div>
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <div class="notification-dropdown">
+                        <button class="nav-icon-btn" id="notiBell">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge" id="notiBadge">3</span>
+                        </button>
+                    </div>
+                    <div class="user-profile-menu">
+                        <div class="profile-trigger" id="profileTrigger">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="User Profile" class="avatar">
+                            <span class="username">Sarah Jenkins</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-panel" id="profileDropdown">
+                            <a href="settings.html"><i class="fas fa-user-cog"></i> My Account</a>
+                            <a href="settings.html"><i class="fas fa-shield-alt"></i> Security</a>
+                            <hr>
+                            <a href="login.html" class="text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Dynamic Section -->
+            <main class="content-body">
+                <div class="content-header">
+                    <h1>Dashboard Overview</h1>
+                    <p class="text-muted">Real-time enterprise operations matrix summary data.</p>
+                </div>
+
+                <!-- KPI Cards Dashboard Matrix Grid -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon bg-primary-light text-primary"><i class="fas fa-wallet"></i></div>
+                        <div class="kpi-details">
+                            <h3>Total Revenue</h3>
+                            <h2 class="counter" data-target="128450">$0</h2>
+                            <span class="trend trend-up"><i class="fas fa-arrow-up"></i> 12.5% <small>vs last month</small></span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon bg-success-light text-success"><i class="fas fa-shopping-basket"></i></div>
+                        <div class="kpi-details">
+                            <h3>Total Orders</h3>
+                            <h2 class="counter" data-target="3240">0</h2>
+                            <span class="trend trend-up"><i class="fas fa-arrow-up"></i> 8.2% <small>vs last month</small></span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon bg-warning-light text-warning"><i class="fas fa-users"></i></div>
+                        <div class="kpi-details">
+                            <h3>Total Customers</h3>
+                            <h2 class="counter" data-target="1845">0</h2>
+                            <span class="trend trend-up"><i class="fas fa-arrow-up"></i> 5.4% <small>vs last month</small></span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon bg-danger-light text-danger"><i class="fas fa-chart-pie"></i></div>
+                        <div class="kpi-details">
+                            <h3>Net Profit Margin</h3>
+                            <h2 class="counter" data-target="27.4">0%</h2>
+                            <span class="trend trend-down"><i class="fas fa-arrow-down"></i> 1.1% <small>vs last month</small></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Visual Framework Analytics Rows -->
+                <div class="charts-grid">
+                    <div class="chart-container card-wrapper">
+                        <div class="card-header"><h3>Revenue Performance Trend</h3></div>
+                        <div class="chart-wrapper"><canvas id="revenueTrendChart"></canvas></div>
+                    </div>
+                    <div class="chart-container card-wrapper">
+                        <div class="card-header"><h3>Monthly Distribution Performance</h3></div>
+                        <div class="chart-wrapper"><canvas id="monthlySalesChart"></canvas></div>
+                    </div>
+                    <div class="chart-container card-wrapper">
+                        <div class="card-header"><h3>Sales Matrix By Core Category</h3></div>
+                        <div class="chart-wrapper pie-chart-layout"><canvas id="salesCategoryChart"></canvas></div>
+                    </div>
+                </div>
+
+                <!-- Bottom Data Segment Grid Layout -->
+                <div class="data-segment-grid">
+                    <!-- Recent Orders Miniature Component -->
+                    <div class="card-wrapper table-card">
+                        <div class="card-header">
+                            <h3>Recent System Invoices</h3>
+                            <a href="orders.html" class="btn btn-sm btn-outline">View All</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashboardOrdersSummaryTable">
+                                    <!-- Populated programmatically inside the core js framework -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Quick Secondary Statistics Card Container -->
+                    <div class="card-wrapper stats-summary-card">
+                        <div class="card-header"><h3>Quick Matrix Operations Statistics</h3></div>
+                        <div class="stats-list-group">
+                            <div class="stats-list-item">
+                                <div class="item-info"><span>New Onboarded Customers</span><strong>24 New Members</strong></div>
+                                <div class="progress-bar-container"><div class="progress-bar bg-primary" style="width: 75%"></div></div>
+                            </div>
+                            <div class="stats-list-item">
+                                <div class="item-info"><span>Pending Pipeline Invoices</span><strong>18 Standard Processing</strong></div>
+                                <div class="progress-bar-container"><div class="progress-bar bg-warning" style="width: 35%"></div></div>
+                            </div>
+                            <div class="stats-list-item">
+                                <div class="item-info"><span>Completed Logistics Invoices</span><strong>2,980 Dispatched Orders</strong></div>
+                                <div class="progress-bar-container"><div class="progress-bar bg-success" style="width: 92%"></div></div>
+                            </div>
+                            <div class="stats-list-item">
+                                <div class="item-info"><span>Active Catalog Products</span><strong>425 Available SKUs</strong></div>
+                                <div class="progress-bar-container"><div class="progress-bar bg-info" style="width: 60%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/charts-config.js"></script>
+</body>
+</html>
